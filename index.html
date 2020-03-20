@@ -15,10 +15,8 @@ function goAppStoreOrPlayStore() {
  uri scheme이 정의되어 있다면 OS에 따른 구분을 별도로 할 필요가 없다.
  */
 function executeApp() {
-	var appUriScheme = "action://test?message=" + location.search.substr(location.search.indexOf("=") + 1);
+	var appUriScheme = "action://test?message=";
 	var msg = location.search.substr(location.search.indexOf("=") + 1);
-	alert(msg);
-	alert(appUriScheme);	
 	document.location.href = appUriScheme;
 }
 
