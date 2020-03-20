@@ -16,7 +16,7 @@ function goAppStoreOrPlayStore() {
  */
 function executeApp() {
 	var appUriScheme = "action://messageapp?message=";
-	var msg = getMessage();
+	var msg = location.search.substr(location.search.indexOf("=") + 1);
 	alert(msg);
 	appUriScheme.concat(getMessage);
 	alert(appUriScheme);	
