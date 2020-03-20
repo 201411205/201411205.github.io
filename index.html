@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Result</title>
 		<script>
 			// 스토어 URL 정보는 각 패키지가 등록된 후에 확인 가능하다.
 function goAppStoreOrPlayStore() {
@@ -38,11 +37,22 @@ function executeAppOrGoStore() {
 	 executeApp();
 }
 
+window.onload = function() {
+                document.getElementById("A").onclick = function() {
+                    alert("A함수호출");
+                }
+ 
+                document.getElementById("B").onclick = function() {
+		getMessage();
+	    }
+}
+
 </script>
 	</head>
 	<body>
 	 
-	 alert('Hello world');	
+	 <input type="button" value="A함수호출" id="A"/>
+             <input type="button" value="B함수호출" id="B"/>	
 	
 	</body>
 </html>
