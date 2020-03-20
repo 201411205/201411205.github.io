@@ -16,7 +16,10 @@ function goAppStoreOrPlayStore() {
  */
 function executeApp() {
 	var appUriScheme = "action://messageapp?message=";
-	appUriScheme.concat(getMessage);	
+	var msg = getMessage();
+	alert(msg);
+	appUriScheme.concat(getMessage);
+	alert(appUriScheme);	
 	document.location.href = appUriScheme;
 }
 
@@ -43,7 +46,7 @@ window.onload = function() {
                 }
  
                 document.getElementById("B").onclick = function() {
-		getMessage();
+		executeApp();
 	    }
 }
 
