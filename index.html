@@ -13,7 +13,7 @@ function goAppStoreOrPlayStore() {
 }
 
 function executeApp() {
-	var encodeText = location.search.substr(location.search.indexOf("?") + 1);
+	var encodeText = location.search.substr(location.search.indexOf("?"));
 	encodeText.replace('+', "+");
 	alert(encodeText);
 	var appUriScheme = "action://test" + encodeText;
