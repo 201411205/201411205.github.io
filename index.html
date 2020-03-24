@@ -15,7 +15,6 @@ function goAppStoreOrPlayStore() {
 function executeApp() {
 	var encodeText = location.search.substr(location.search.indexOf("?") + 1);
 	encodeText.replace('+', "+");
-	
 	var appUriScheme = "action://test" + encodeText;
 	document.location.href = appUriScheme;
 }
